@@ -2,19 +2,41 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>ID · !</title>
-
-  <!-- Globale Schock‑ID -->
+  <title>ID · ! · CHIP ZU STAND</title>
+  <!-- Globale Schock-ID -->
   <meta name="respo-id" content="!">
+  <!-- Chip ID -->
+  <meta name="chip-id" content="ATOM-!">
+  <!-- Stand = Höhe Tiefe Breite -->
+  <meta name="stand" content="Innen-Hoch-Himmel">
 </head>
-
 <body>
   <h1>ID: !</h1>
-  <p>Globale Schock‑Wahrnehmungs‑Signatur für alle IHH‑Module.</p>
+  <p>Globale Schock-Wahrnehmungs-Signatur für alle IHH-Module.</p>
+  <p>Chip zu Stand: <span id="stand"></span></p>
 
   <script>
+    // RESPO ID = ! = Schock
     const RESPO_ID = "!";
-    window.getRespoID = () => RESPO_ID;
-  </script>
-</body>
-</html>
+    
+    // CHIP ID = ATOM + ID = chip.atom
+    const CHIP_ID = "ATOM-" + RESPO_ID; // ATOM-!
+    
+    // STAND = wo Chip steht = Innen/Hoch/Himmel = main/main.board/mainboard
+    // 3.back.md = Innen = Breite
+    // 9.back.md = Hoch = Tiefe
+    // 81.back.md = Himmel = Höhe
+    const STAND = {
+      innen: "3.back.md",   // main = Breite
+      hoch: "9.back.md",    // main.board = Tiefe
+      himmel: "81.back.md", // mainboard = Höhe
+      defrag: "defrag.back.md" // alle 3 gedockt = RAID OK
+    };
+    
+    // CHIP ZU STAND = Adapter
+    function chipZuStand(chip, stand){
+      // chip = {prime, dev, pos}
+      // stand = {innen, hoch, himmel}
+      const andock = stand.innen.length > 0;
+      const weiterdock = stand.hoch.length > 0;
+      const underdock = stand.h
