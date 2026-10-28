@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root{--bg:#0a0f0a;--surface:#121a12;--surface2:#1a261a;--line:#2a3d2a;--text:#e8f0e2;--muted:#9ab090;--accent:#7bc950;--accent2:#ffb020;--danger:#ff5a3c}
+@media (prefers-color-scheme: light){:root{--bg:#f2f5ec;--surface:#ffffff;--surface2:#e8efe0;--line:#c8d8b8;--text:#1a2416;--muted:#5a6b52;--accent:#3a7d1e;--accent2:#b87a00}}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--text);font-family:Georgia, 'Times New Roman', serif}
+.mono{font-family:ui-monospace, SFMono-Regular, Menlo, monospace}
