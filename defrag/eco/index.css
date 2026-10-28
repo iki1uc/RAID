@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --bg:#02060a; --panel:#070e1e; --panel2:#0a1428; --gold:#ffd700; --ready:#00ff88;
+  --focus:#2a5bd7; --ink:#cfe3ff; --dim:#5f7ba6; --line:#16294d;
+  --surface:#070e1e; --surface-2:#0a1428;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#02060a; --panel:#070e1e; --ink:#cfe3ff; }
+}
+html,body{ background:var(--bg); color:var(--ink); font-family:'IBM Plex Mono', ui-monospace, monospace; }
+*{ scrollbar-width:thin; scrollbar-color:#2a5bd7 #070e1e; }
+canvas{ display:block; }
+.win{ position:absolute; background:var(--panel); border:1px solid var(--line); border-radius:8px; box-shadow:0 12px 40px rgba(0,0,0,.6); min-width:220px; }
+.win-head{ cursor:grab; background:var(--panel2); border-bottom:1px solid var(--line); padding:6px 10px; font-size:11px; letter-spacing:.08em; display:flex; justify-content:space-between; align-items:center; }
+.btn{ border:1px solid var(--line); background:var(--panel2); padding:4px 8px; font-size:11px; border-radius:4px; cursor:pointer; }
+.btn:hover{ border-color:var(--gold); color:var(--gold); }
+.btn.on{ background:var(--gold); color:#02060a; border-color:var(--gold); font-weight:700; }
+input[type=range]{ accent-color:var(--gold); width:100%; }
+textarea{ background:#040a16; color:var(--ink); border:1px solid var(--line); font-family:inherit; }
